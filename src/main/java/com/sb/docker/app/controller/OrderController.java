@@ -3,6 +3,7 @@ package com.sb.docker.app.controller;
 import com.sb.docker.app.dao.Order;
 import com.sb.docker.app.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,12 +22,12 @@ public class OrderController {
         return "Hello My Dear...!";
     }
 
-    @GetMapping(value = "/order/all")
+    @GetMapping(value = "/order/all", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Order> getAllOrders(){
         return orderService.getAllOrders();
     }
 
-    @GetMapping(value = "/order/{id}")
+    @GetMapping(value = "/order/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Order getAllOrders(@PathVariable int id){
         return orderService.findOrderById(id);
     }

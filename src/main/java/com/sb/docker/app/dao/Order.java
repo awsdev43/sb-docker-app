@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Order {
-    private int orderId;
-    private double orderPrice;
+    private Long orderId;
+    private Double orderPrice;
 
 }

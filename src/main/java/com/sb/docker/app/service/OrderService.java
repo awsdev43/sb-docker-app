@@ -24,12 +24,12 @@ public class OrderService {
 
     private List<Order> populateOrdersList(){
         List<Order> listOrder = new ArrayList<Order>();
-        listOrder.add(new Order(100,2030.40));
-        listOrder.add(new Order(200,100.40));
-        listOrder.add(new Order(300,700.00));
-        listOrder.add(new Order(400,1340.70));
-        listOrder.add(new Order(500,10000.40));
-        listOrder.add(new Order(600,5400.80));
+        listOrder.add(new Order(100L,2030.40));
+        listOrder.add(new Order(200L,100.40));
+        listOrder.add(new Order(300L,700.00));
+        listOrder.add(new Order(400L,1340.70));
+        listOrder.add(new Order(500L,10000.40));
+        listOrder.add(new Order(600L,5400.80));
 
         return listOrder;
     }
